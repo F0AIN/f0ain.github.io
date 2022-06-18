@@ -27,12 +27,22 @@ body {
 }
 
 .link {
+}
+
+.link_item {
+    display: inline-block;
     text-align: center;
+    font-weight: bold;
+}
+
+.link_name {
+    display: inline-block;
+    text-align: left;
 }
 
 .btn {
     position: relative;
-    display: inline-block;
+    display: grid;
     color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
