@@ -1,0 +1,27 @@
+body {
+    font-family: 'monospace';
+}
+
+.main .container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 80px 0px;
+    background: rgba(125, 125, 125, 1);
+    position: relative;
+}
+
+.icon_image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: auto;
+}
+
+.name_text {
+    width: 250px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
