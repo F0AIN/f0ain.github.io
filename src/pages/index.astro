@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import NavLink from "../components/NavLink.astro";
+---
+
+<Layout title="FRAIN's Page">
+	<main>
+		<Navbar>
+			<NavLink body="About" href="#about" />
+			<NavLink body="Blog" href="#blog" />
+		</Navbar>
+
+		<!-- Page content here -->
+		<div id="about" class="py-20">
+			<div class="w-10/12 bg-neutral rounded-xl md:max-w-2xl mx-auto">
+				<div class="flex flex-col md:flex-row items-center">
+					<div class="avatar">
+						<div class="h-64 md:w-64 md:h-full rounded-full p-5">
+							<img src="/favicon.png" alt="自画像" />
+						</div>
+					</div>
+					<div class="p-8 text-white">
+						<p>ようこそ。FRAINのページへ</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
