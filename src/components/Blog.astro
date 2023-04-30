@@ -7,7 +7,7 @@ const posts = await Astro.glob("../pages/blog/*.md");
   <div class="flex flex-col md:flex-row justify-around">
     {
       posts
-        .filter((p) => p.frontmatter.draft)
+        .filter((p) => !p.frontmatter.draft)
         .slice(0, 3)
         .map((post) => (
           <div class="p-2">
