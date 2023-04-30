@@ -4,7 +4,7 @@ title: "サイトを作りました"
 date: "2023-04-30"
 headImage: "https://i.gyazo.com/b2ad17d1dd1e40afb56700313f1da20f.png"
 description: "Astroでサイト、ブログを作りました。"
-draft: true
+draft: false
 ---
 
 # ブログを作りました！
