@@ -1,0 +1,31 @@
+---
+import NavLink from "../components/NavLink.astro";
+import Navbar from "../components/Navbar.astro";
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <main>
+      <Navbar showEndMenu={false}>
+        <NavLink body="Top" href="/" />
+      </Navbar>
+      <article class="p-6">
+        <h1 class="card-title text-4xl">{frontmatter.title}</h1>
+        <p class="flex justify-end">{frontmatter.date}</p>
+
+        <div class="divider"></div>
+
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
