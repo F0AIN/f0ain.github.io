@@ -1,0 +1,16 @@
+---
+const posts = await Astro.glob("../pages/blog/*.md");
+---
+
+<div id="blog">
+  {
+    posts
+      .filter((p) => p.frontmatter.publish)
+      .slice(0, 3)
+      .map((post) => (
+        <a href={post.url}>
+          <h1>{post.frontmatter.title}</h1>
+        </a>
+      ))
+  }
+</div>

@@ -1,3 +1,11 @@
+---
+export interface Props {
+	showEndMenu: boolean;
+}
+
+const { showEndMenu } = Astro.props;
+---
+
 <div class="navbar bg-primary bg-opacity-90 sticky top-0 z-30">
 	<div class="navbar-start">
 		<div class="dropdown">
@@ -33,7 +41,7 @@
 		</ul>
 	</div>
 
-	<div class="navbar-end">
+	<div class="navbar-end" style={showEndMenu ? "" : "display:none"}>
 		<ul class="menu menu-horizontal">
 			<li>
 				<a
