@@ -18,9 +18,11 @@ const { frontmatter } = Astro.props;
       <Navbar showEndMenu={false}>
         <NavLink body="Top" href="/" />
       </Navbar>
-      <article class="p-6">
-        <h1 class="card-title text-4xl">{frontmatter.title}</h1>
-        <p class="flex justify-end">{frontmatter.date}</p>
+      <article class="p-4">
+        <header class="text-center p-13 max-auto">
+          <h1 class="card-title">{frontmatter.title}</h1>
+          <p class="flex justify-end">{frontmatter.date}</p>
+        </header>
 
         <div class="divider"></div>
 
@@ -29,3 +31,8 @@ const { frontmatter } = Astro.props;
     </main>
   </body>
 </html>
+<style is:global>
+  h1 {
+    @apply text-3xl;
+  }
+</style>
