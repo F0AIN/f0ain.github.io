@@ -41,7 +41,11 @@ const { showEndMenu } = Astro.props;
 		</ul>
 	</div>
 
-	<div class="navbar-end" style={showEndMenu ? "" : "display:none"}>
+	<div
+		class="navbar-end"
+		data-testid="navbar-end"
+		style={showEndMenu ? "" : "display:none"}
+	>
 		<ul class="menu menu-horizontal">
 			<li>
 				<a

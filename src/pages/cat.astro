@@ -1,0 +1,17 @@
+---
+import NavLink from "../components/NavLink.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import { fetchCat } from "../libs/fetchCatApi";
+
+const image = await fetchCat();
+---
+
+<Layout title="今日の猫">
+  <Navbar showEndMenu={false}>
+    <NavLink body="Top" href="/" />
+  </Navbar>
+  <div class="flex py-6 px-2 justify-center">
+    <img src={image.url} width={image.width} height={image.height} />
+  </div>
+</Layout>

@@ -2,10 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Blog from "../components/Blog.astro";
+import Navbar from "../components/Navbar.astro";
+import NavLink from "../components/NavLink.astro";
 ---
 
 <Layout title="FRAIN's Page">
+	<Navbar showEndMenu={true}>
+		<NavLink body="About" href="#about" />
+		<NavLink body="Blog" href="#blog" />
+	</Navbar>
+
 	<!-- Page content here -->
+
 	<About />
 	<Blog />
 </Layout>
