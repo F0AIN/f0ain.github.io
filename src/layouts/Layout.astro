@@ -1,6 +1,7 @@
 ---
 import NavLink from "../components/NavLink.astro";
 import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
 
 export interface Props {
 	title: string;
@@ -10,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html data-theme="mytheme">
+<html data-theme="sunset">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
