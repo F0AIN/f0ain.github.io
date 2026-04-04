@@ -2,6 +2,7 @@
 import NavLink from "../components/NavLink.astro";
 import Navbar from "../components/Navbar.astro";
 const { frontmatter } = Astro.props;
+import "../styles/global.css";
 ---
 
 <html>
@@ -31,17 +32,3 @@ const { frontmatter } = Astro.props;
     </main>
   </body>
 </html>
-<style is:global>
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
-  p {
-    @apply py-2;
-  }
-  hr {
-    @apply border-primary;
-  }
-</style>
