@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://f0ain.dev',
-  integrations: [tailwind()],
+  integrations: [],
+
   markdown: {
     syntaxHighlight: 'shiki',
     shikiConfig: {
@@ -16,5 +17,9 @@ export default defineConfig({
       // 水平スクロールを防ぐために文字の折り返しを有効にする
       wrap: true,
     },
+  },
+
+  vite: {
+    plugins: [tailwindcss()]
   }
 });
